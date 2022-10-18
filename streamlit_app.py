@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from helper import regression,classification
+from helper import regression
 import pickle
 
 
@@ -25,8 +25,7 @@ def app_interface(df):
                         data=pickle.dumps(model),
                         file_name="model.pkl",
                     )
-        elif model_type=='Classification':
-            model,acc=classification(df,predictor) 
+        
         
         
         
